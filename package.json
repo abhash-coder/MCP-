@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-on-pages && mv .vercel/output/static/_worker.js/index.js .vercel/output/static/_worker.js.tmp && rm -rf .vercel/output/static/_worker.js && mv .vercel/output/static/_worker.js.tmp .vercel/output/static/_worker.js",
     "start": "next start",
     "lint": "eslint"
   },
